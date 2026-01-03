@@ -9,6 +9,7 @@
 }
 
 /* shared style */
+
 .display-flex{
     display: flex;
 }
@@ -20,20 +21,138 @@
 .text-light-gray{
     color:#727272 ;
 }
-/* header style */
 
+.primary-btn{
+    background-color: rgba(255, 144, 14, 1);
+    color: rgba(255, 255, 255, 1);
+    max-width: 180px;
+    max-height: 64px;
+    padding: 20px 25px ;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border: none;
+}
+/* header style */
+.bg-color{
+    background-color: rgba(255, 144, 14, 0.1);
+}
 
 /* navbar style */
 .nav-item{
     list-style: none;
+    font-size: 18px;
     
 }
 .nav-item > li{
-    margin-left: 20px;
+    margin-right: 40px;
 }
 .nav-item > li >a{
     text-decoration: none;
 }
-.navbar{
+.navbar , .bannar{
     justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+/* bannar style  */
+
+.bannar-container{
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto;
+    
+}
+.bannar-container > h1{
+    font-size: 4rem;
+    font-weight: 600;
+}
+.bannar-container > p{
+    margin: 26px 0;
+}
+.bannar-container > button{
+    margin-bottom:50px;
+}
+.bannar-img{
+    width: 100%;
+    margin-bottom: 40px;
+}
+/* section01 team info  */
+.team-info{
+    max-width: 1318px;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 130px;
+    
+
+}
+.team-member{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px
+}
+.team-description{
+    margin-left: 73px;
+}
+#quick-list{
+    font-size: 2.5rem;
+    font-weight:600 ;
+}
+#of-our{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+#features{
+    color: rgba(255, 144, 14, 1);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* some facts card */
+
+.facts-title{
+    max-width: 258px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.facts-des{
+    max-width:542px;
+}
+.facts{
+    max-width: 1385px;
+    margin: 0 auto;
+}
+.facts-card{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:120px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+.common-border{
+    border: 2px solid rgba(255, 144, 14, 1);
+    justify-items: center;
+    text-align: center;
+    padding:45px;
+    border-radius: 8px;
+}
+
+
+
+/* responsive media  */
+/* small device */
+
+@media screen and (max-width:576px){
+    .nav-item , .navbar , .team-info{
+        flex-direction: column;
+    }
+    .team-member{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .team-description{
+        margin: 50px auto;
+    }
+
+    
 }
